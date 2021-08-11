@@ -1,0 +1,92 @@
+/* 제목 글꼴
+    `font-family: 'Black Han Sans', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/*
+    기본 글꼴
+    font-family : 'SeoulHangangM', sans-serif;
+*/
+@font-face {
+    font-family: 'SeoulHangangM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+/*
+    62.5% 사용하는 이유는 16px * 62.5% = 10px 이다.
+    1rem = 10px,   1.5rem => 15px 이런식이다.
+*/
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family : 'SeoulHangangM', sans-serif;
+
+    /* 16px 기준 */
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    text-align: center;
+    overflow-x : hidden;
+}
+
+/* 이미지 붕떠있는걸 막기 위함 */
+img
+{
+    vertical-align: middle;
+}
+
+
+ol,li
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+a
+{
+    font-size: inherit;
+    text-decoration: none;
+}
+
+/* 메인타이틀 메인 제목 크기 */
+h1
+{
+    /* 64 px */
+    font-size: 6.4rem;
+    font-family: 'Black Han Sans', sans-serif;
+}
+
+:is(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section)
+{
+    display: block;
+}
+
+:is(audio, canvas, progress, video)
+{
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* 버튼 자체 초기화 */
+button
+{
+    all : unset;
+}
