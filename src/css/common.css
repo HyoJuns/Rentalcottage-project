@@ -184,3 +184,37 @@
 .fnb__item > a:hover {
   color: #1dc4e2;
 }
+
+@media screen and (max-width: 1440px) and (min-width: 769px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  body {
+    font-size: 12px;
+  }
+
+  .header__gnb {
+    width: 80%;
+  }
+  .header__logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 50.5%;
+  }
+
+  body {
+    font-size: 12px;
+  }
+
+  .header__gnb {
+    width: 80%;
+  }
+  .header__logo {
+    display: none;
+  }
+}

@@ -85,7 +85,7 @@ $font-name-default : 'Noto Sans KR';
             .1rem .1rem .2rem #666
         ;
         letter-spacing: .5rem;
-
+        transition: font-size .4s ease;
         @include fun.Debug(blue);
     }
 
@@ -163,7 +163,6 @@ $font-name-default : 'Noto Sans KR';
         @include fun.Debug(tomato);
         
         @include fun.FlexboxSetting(row, center,center,2em);
-
         padding-top : 10rem;
         background-color: #444;
 
@@ -510,3 +509,74 @@ $font-name-default : 'Noto Sans KR';
 }
 
 // #endregion Section-6
+
+
+// media Query
+@include view.Desktop
+{
+    .section-1
+    {
+        &__mainTitle
+        {
+            font-size: $font-size-mainTitle;
+        }
+    }
+}
+
+@include view.Tablet
+{
+    .section-1
+    {
+        &__mainTitle
+        {
+            font-size: $font-size-mainTitle / 1.2;
+        }
+    }
+    .section-2
+    {
+        &__flexbox
+        {
+            @include fun.FlexboxSetting(column, center,center,2em);
+            
+        }
+
+        &__template
+        {
+            text-align: center;
+            width: 100%;
+            height: 50%;
+
+            
+        }
+        &__text
+        {
+            margin-left : 1em;
+        }
+    }
+}
+@include view.Mobile
+{
+    .section-1
+    {
+        &__mainTitle
+        {
+            font-size: $font-size-mainTitle / 1.5;
+        }
+    }
+    .section-2
+    {
+        &__flexbox
+        {
+            @include fun.FlexboxSetting(column, center,center,2em);
+            
+        }
+
+        &__template
+        {
+            width: 100%;
+            height: 50%;
+
+            
+        }
+    }
+}

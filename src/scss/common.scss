@@ -228,3 +228,58 @@ $header-backgroundcolor-hover : hsla(0, 0%, 0%, .4);
 }
 
 // Footer Style End
+
+// Media Query
+@include view.Desktop
+{
+    body
+    {
+        font-size: 14px;
+    }
+}
+
+@include view.Tablet
+{
+    body
+    {
+        font-size: 12px;
+    }
+    .header
+    {
+        &__gnb
+        {
+            @include fun.Debug(red);
+
+            width : 80%;
+        }
+        &__logo
+        {
+            display: none;
+        }
+    }   
+    
+}
+@include view.Mobile
+{
+    html
+    {
+        font-size: 50.5%;
+    }
+    body
+    {
+        font-size: 12px;
+    }
+    .header
+    {
+        &__gnb
+        {
+            @include fun.Debug(red);
+
+            width : 80%;
+        }
+        &__logo
+        {
+            display: none;
+        }
+    }   
+}
