@@ -305,3 +305,14 @@ button
         min-width: 320px;
     }
 }
+
+
+/* Footer */
+.footer
+{
+    height: 350px;
+
+    background-color : hsl(0,0%,0%);
+
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+}
