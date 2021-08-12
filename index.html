@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
     <link rel="stylesheet" type="text/css" href="./src/styles/reset.css">
+
+    <!-- 검색엔진 키워드 -->
+    <meta name="keyword" content="펜션">
+    <!-- 웹 페이지에 대한 설명 -->
+    <meta name="description" content="포트폴리오 용도">
+    <!-- 문서의 저자 -->
+    <meta name="author" content="이젠">
+
     <title>Main Page</title>
 </head>
-<body>
 
+<body>
+    <!-- #region Header  -->
+    <header class="header" slot="header">
+        <div class="container">
+            <!-- flex 박스 컨테이너 -->
+            <div class="flexbox__container flexbox__container--direction">
+                <figure class="header__logoContainer">
+                    <img src="./src/images/LOGO.png" alt="LOGO" class="header__logoImage">
+                </figure>
+
+                <!-- 메뉴 -->
+                <nav class="gnb">
+                    <ul class="gnb__container">
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                펜션소개
+                            </a>
+                        </li>
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                객실소개
+                            </a>
+                        </li>
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                펜션스페셜
+                            </a>
+                        </li>
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                펜션서비스
+                            </a>
+                        </li>
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                주변여행지
+                            </a>
+                        </li>
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                예약안내
+                            </a>
+                        </li>
+                        <li class="gnb__list">
+                            <a href="#" class="gnb__value">
+                                커뮤니티
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- ICON -->
+                <ul class="navIcon">
+                    <li class="navIcon__list">
+                        <a href="#" class="navIcon__value">
+                            <span class="icon-bank"></span>
+                        </a>
+                    </li>
+                    <li class="navIcon__list">
+                        <a href="#" class="navIcon__value">
+                            <span class="icon-location2"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- #endregion -->
 </body>
+
 </html>
