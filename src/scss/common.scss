@@ -9,48 +9,42 @@
 @use './mixin' as fun;
 
 // 헤더 배경화면
-$header-backgroundcolor : hsl(0, 0%, 0%);
+$header-backgroundcolor: hsl(0, 0%, 0%);
 
 // 해더 호버 배경화면
-$header-backgroundcolor-hover : hsla(0, 0%, 0%, .4);
-
+$header-backgroundcolor-hover: hsla(0, 0%, 0%, 0.4);
 
 // Header Style Start
-.header
-{
+.header {
     // 크기 설정
-    width : 100%;
-    height : 100px;
+    width: 100%;
+    height: 100px;
 
     background-color: $header-backgroundcolor;
 
-    position : fixed;
-    top : 0;
-    left : 0;
+    position: fixed;
+    top: 0;
+    left: 0;
 
-
-    box-shadow: .1rem .1rem .2rem #444;
+    box-shadow: 0.1rem 0.1rem 0.2rem #444;
     z-index: 1000;
 
     overflow: hidden;
 
-    transition: background-color .7s ease-in;
+    transition: background-color 0.7s ease-in;
 
     // ! Hover
-    &:hover
-    {
+    &:hover {
         background-color: $header-backgroundcolor-hover;
     }
-    
+
     // Container
-    &__wrap
-    {
+    &__wrap {
         @include fun.wrapSetting;
     }
 
     // Flexbox
-    &__flexbox
-    {
+    &__flexbox {
         width: inherit;
         height: inherit;
 
@@ -58,71 +52,60 @@ $header-backgroundcolor-hover : hsla(0, 0%, 0%, .4);
     }
 
     // LOGO
-    &__logo
-    {
-        width : 10%;
-        
+    &__logo {
+        width: 10%;
+
         @include fun.Debug();
 
         // Image
-        &  img
-        {
+        & img {
             width: 100%;
             vertical-align: middle;
         }
     }
 
     // GNB 메뉴
-    &__gnb
-    {
+    &__gnb {
         @include fun.Debug(red);
 
-        width : 60%;
+        width: 60%;
     }
 
     // Icon 메뉴
-    &__icon
-    {
+    &__icon {
         @include fun.Debug(yellow);
 
         @include fun.FlexboxSetting(row, space-between, center, 1em);
     }
 }
 
-.gnb
-{
-    width : 100%;
+.gnb {
+    width: 100%;
 
     @include fun.FlexboxSetting(row, space-evenly, center, 1em);
 
-    &__item
-    {
-        color : white;
+    &__item {
+        color: white;
 
-        transition: color .3s ease-in;
-        &:hover
-        {
-            color: hsl(189, 77.3%, 50.0%);
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: hsl(189, 77.3%, 50%);
         }
-        & > a
-        {
-            padding : 1em 0;
-            letter-spacing: 2px;   
-            color : inherit;
+        & > a {
+            padding: 1em 0;
+            letter-spacing: 2px;
+            color: inherit;
         }
     }
 }
-.icon__item
-{
-    & > a
-    {
-        padding : 1em 0;
+.icon__item {
+    & > a {
+        padding: 1em 0;
         font-size: 1.2em;
-        color : white;
-        transition: color .3s ease-in;
-        &:hover
-        {
-            color : hsl(189, 77.3%, 50.0%);
+        color: white;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: hsl(189, 77.3%, 50%);
         }
     }
 }
@@ -131,97 +114,79 @@ $header-backgroundcolor-hover : hsla(0, 0%, 0%, .4);
 
 // Footer Style Start
 
-.footer
-{
-    height: 400px;
+.footer {
+    height: 300px;
 
-    background-color : hsl(0,0%,0%);
+    background-color: hsl(0, 0%, 0%);
 
-    box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
-    padding : 3em;
-    &__wrap
-    {
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 3em;
+
+    &__wrap {
         @include fun.wrapSetting;
     }
 
-    &__fnb
-    {
+    &__fnb {
         @include fun.Debug(rgb(153, 158, 224));
 
-        width : 100%;
+        width: 100%;
         border-bottom: 2px solid #fff;
     }
 
     overflow: hidden;
 
+    &__left {
+        float: left;
 
-    &__left
-    {
-        float : left;
-
-        color : white;
+        color: white;
     }
 
-    &__right
-    {
-        float : right;
-        color : white;
+    &__right {
+        float: right;
+        color: white;
     }
 
-    &__text
-    {
-        font-size: .8em;
-        padding : 1em 0;
+    &__text {
+        font-size: 0.8em;
+        padding: 1em 0;
         line-height: 2;
-        & > a
-        {
-            color : #fff;
+        & > a {
+            color: #fff;
         }
-
     }
-    &__address
-    {
-        padding : 1em 0;
+    &__address {
+        padding: 1em 0;
         line-height: 2;
     }
-    &__copyright
-    {
-        padding-top : 10em;
+    &__copyright {
+        padding-top: 10em;
 
-        color : #444;
+        color: #444;
     }
 }
 
-.fnb
-{
-    &__container
-    {
+.fnb {
+    &__container {
         @include fun.FlexboxSetting(row, space-between, center);
-        gap : 1em;
+        gap: 1em;
         width: 60%;
         height: inherit;
-        
-        
     }
-    &__item
-    {
-        &:nth-child(1)
-        {
+    &__item {
+        &:nth-child(1) {
             padding-left: 0;
         }
-        color : white;
-        padding : 1em;
-        & > a
-        {
-            color : inherit;
+        color: white;
+        padding: 1em;
+        & > a {
+            color: inherit;
             letter-spacing: 2px;
             text-decoration: none;
             font-size: inherit;
 
-            transition: color .3s ease-in;
-            &:hover
-            {
-                color: hsl(189, 77.3%, 50.0%);
+            transition: color 0.3s ease-in;
+            &:hover {
+                color: hsl(189, 77.3%, 50%);
             }
         }
     }
@@ -230,56 +195,42 @@ $header-backgroundcolor-hover : hsla(0, 0%, 0%, .4);
 // Footer Style End
 
 // Media Query
-@include view.Desktop
-{
-    body
-    {
+@include view.Desktop {
+    body {
         font-size: 14px;
     }
 }
 
-@include view.Tablet
-{
-    body
-    {
+@include view.Tablet {
+    body {
         font-size: 12px;
     }
-    .header
-    {
-        &__gnb
-        {
+    .header {
+        &__gnb {
             @include fun.Debug(red);
 
-            width : 80%;
+            width: 80%;
         }
-        &__logo
-        {
+        &__logo {
             display: none;
         }
-    }   
-    
+    }
 }
-@include view.Mobile
-{
-    html
-    {
+@include view.Mobile {
+    html {
         font-size: 50.5%;
     }
-    body
-    {
+    body {
         font-size: 12px;
     }
-    .header
-    {
-        &__gnb
-        {
+    .header {
+        &__gnb {
             @include fun.Debug(red);
 
-            width : 80%;
+            width: 80%;
         }
-        &__logo
-        {
+        &__logo {
             display: none;
         }
-    }   
+    }
 }

@@ -1,0 +1,79 @@
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #222;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.section-1__mainTitle {
+  font-size: 4.2em;
+  position: absolute;
+}
+
+.pannel {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url("../images/img_water_desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 2rem;
+  color: white;
+}
+.pannel::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: absolute;
+  left: 0;
+}
+.pannel__title {
+  font-size: 4.2em;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+.pannel__desc {
+  position: relative;
+  font-size: 1.2em;
+  text-align: left;
+  padding: 2em;
+  letter-spacing: 4px;
+}
+
+.aside {
+  position: absolute;
+  left: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+}
+.aside__menu {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item {
+  font-size: 1.5em;
+  width: 35px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  cursor: pointer;
+}
+.menu__item.check {
+  color: #1dc4e2;
+  border: 2px solid #1dc4e2;
+}
