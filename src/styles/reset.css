@@ -3,16 +3,8 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
-/*
-    기본 글꼴
-    font-family : 'SeoulHangangM', sans-serif;
-*/
-@font-face {
-    font-family: 'SeoulHangangM';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulHangangM.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap');
 
 /* Iconmoon */
 @font-face {
@@ -83,7 +75,7 @@ html
 
 body
 {
-    font-family : 'SeoulHangangM', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 
     /* 16px 기준 */
     font-size: 1.6rem;
@@ -117,14 +109,6 @@ a
 {
     font-size: inherit;
     text-decoration: none;
-}
-
-/* 메인타이틀 메인 제목 크기 */
-h1
-{
-    /* 64 px */
-    font-size: 6.4rem;
-    font-family: 'Black Han Sans', sans-serif;
 }
 
 :is(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section)
@@ -179,6 +163,7 @@ button
     left : 0;
 
     box-shadow: .1rem .1rem .2rem #444;
+    z-index: 1000;
 }
 
 
@@ -219,7 +204,7 @@ button
 {
     width : 70%;
     min-width: 450px;
-    font-family : 'SeoulHangangM', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
     
 }
 
