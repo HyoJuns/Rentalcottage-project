@@ -86,6 +86,7 @@ body
     overflow-x : hidden;
 
     color : hsl(0,0%,26.7%);
+    scroll-behavior: smooth;
 }
 
 /* 이미지 붕떠있는걸 막기 위함 */

@@ -1,3 +1,4 @@
+/* Section-1 */
 .section-1
 {
     position : relative;
@@ -35,7 +36,7 @@
     padding-top : 100px;
 }
 
-.section__title
+.section-1__title
 {
     position: relative;
     font-size: 4.2em;
@@ -48,7 +49,7 @@
     ;
 }
 
-.section__scroll
+.section-1__scroll
 {
 
     position : absolute;
@@ -57,9 +58,143 @@
     text-align: center;
 }
 
-.section__scrollText
+.section-1__scrollText
 {
     font-size: 1em;
     
     text-transform: uppercase;
 }
+
+/* End of Section-1 */
+
+/* article */
+.article__container
+{
+    height: 100px;
+    padding : 2rem;
+    text-align: center;
+}
+.article__title
+{
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color : hsl(189, 77.3%, 50.0%);
+    text-shadow: .1rem .1rem .1rem hsla(0,100%,0%,.7);
+}
+/* End of article */
+
+/* Section-2 */
+.section-2
+{
+    /* 100vh - header - article */
+    height: calc(100vh - 200px);
+}
+
+.container__grid
+{
+    width: 100%;
+    height: 90%;
+
+    background-color: #444;
+}
+
+/* Grid 지원하는가 ? */
+@supports (display: grid)
+{
+    .container__grid
+    {
+        
+        display: grid;
+
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-rows : 1fr;
+        grid-template-areas: "left right";
+    }
+    .section-2__left
+    {
+        grid-area: left;
+        grid-row: 1 / 2;
+        grid-column: 1/ 2;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-2__right
+    {
+        grid-area: right;
+        grid-row : 2 / -2;
+        grid-column: 2 / 3;
+    }
+}
+/* 지원 안할 경우 */
+@supports not (display: grid)
+{
+    .container__grid
+    {
+        overflow: hidden;
+    }
+
+    .section-2__left
+    {
+        width: 50%;
+        height: 100%;
+        float:left;
+    }
+    .section-2__right
+    {
+        width: 50%;
+        height: 100%;
+        float : left;
+    }
+}
+
+.section-2__videoContainer
+{
+    width: calc(100% - 4em);
+    height:  calc(100% - 4em);
+
+    background-color: black;
+    padding : 2em;
+}
+.section-2__video
+{
+    width: inherit;
+    height: inherit;
+
+    object-fit: cover;
+    vertical-align: middle;
+}
+.section-2__textContainer
+{
+    text-align: left;
+    
+    padding : 1em;
+    color : #fff;
+}
+
+.section-2__text
+{
+    margin : 2em 0 0;
+    font-size: 1em;
+
+    width: 80%;
+}
+.section-2__title
+{
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.section-2__button
+{
+    display: inline-block;
+    margin : 2em 0;
+    padding : 1em 2em;
+
+    border : 2px solid #C8E21D;
+    border-radius: 25px;
+
+    color : #fff;
+}
+/* End of Section-2 */
