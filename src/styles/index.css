@@ -185,6 +185,7 @@
     font-size: 1.5em;
     font-weight: bolder;
     text-transform: uppercase;
+    text-shadow: .1rem .1rem .1rem #fff;
 }
 .section-2__button
 {
@@ -198,3 +199,113 @@
     color : #fff;
 }
 /* End of Section-2 */
+
+/* Section-3 */
+.section-3
+{
+    /* 100vh - header */
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-image: url('../images/section-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* End of Section-3 */
+
+/* Section-4 */
+.section-4
+{
+    /* 100vh - header */
+    height: calc(100vh - 100px);
+    text-align: center;
+}
+
+.section-4__title
+{
+    font-size: 2.5em;
+    font-weight: 400;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+
+    margin-top: 2em;
+}
+.section-4__subtitle
+{
+    font-size: 1.5em;
+    letter-spacing: 5px;
+}
+.section-4__button
+{
+    display: inline-block;
+
+    margin: 2em 0;
+
+    padding : .6em 2em;
+
+    background-color: hsl(189, 77.3%, 50.0%);
+    color : hsl(0,0%,100%);
+    border-radius: 5px;
+
+    font-size: 1.2em;
+}
+
+/* 카드 */
+
+.section-4__world
+{
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 1300px;
+
+    position : relative;
+    text-align: left;
+}
+
+.section-4__card
+{
+    position : absolute;
+    width : 300px;
+
+
+    background-color: wheat;
+
+    margin : 5px;
+
+    overflow: hidden;
+
+    transition: all .5s ease-in-out;
+
+}
+
+/* 추가 */
+.section-4__card:nth-child(1)
+{
+    left : 2rem;
+    bottom : 5rem;
+
+    transform: rotateY(45deg) translate3d(5rem, 0, -50px);
+}
+.section-4__card:nth-child(2)
+{
+    left : 50%;
+    bottom: 5rem;
+
+    transform: translateX(-50%) translateZ(-100px) rotateY(0deg);
+}
+.section-4__card:nth-child(3)
+{
+    right : 2rem;
+    bottom : 5rem;
+    transform: rotateY(-45deg) translate3d(-5rem, 0, -50px) ;
+}
+.section-4__cardTitle
+{
+    font-size: 1.5em;
+    font-weight: 400;
+    margin : 1rem 2rem;
+}
+.section-4__cardText
+{
+    margin : 1rem 2rem;
+}
+/* End of Section-4 */
