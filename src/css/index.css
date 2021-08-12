@@ -170,8 +170,12 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: black;
   z-index: 0;
+  transition: background-color 1s ease;
+}
+.section-1.active::before {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .section-1__mainTitle {
   font-size: 4.2em;
@@ -215,6 +219,7 @@
   margin-top: 1em;
   margin-bottom: 1em;
   background-color: white;
+  opacity: 0;
 }
 .section-2__flexbox {
   height: calc(100% - 7em);
@@ -240,6 +245,8 @@
   height: 100%;
   text-align: left;
   color: white;
+  opacity: 0.4;
+  transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .section-2__template > video {
   width: 100%;
@@ -272,6 +279,14 @@
 .section-2__button:hover {
   color: #C8E21D;
   border: 2px solid #fff;
+}
+.section-2.active .section-2__title {
+  opacity: 1;
+  transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.section-2.active .section-2__template {
+  opacity: 1;
+  transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .section-3 {
@@ -425,6 +440,9 @@
 .section-4__card:hover {
   transform: perspective(500px) rotateY(0deg);
 }
+.section-4__card.reverse {
+  transform: perspective(500px) rotateY(-180deg);
+}
 
 .card__title {
   font-size: 1.8em;
@@ -488,8 +506,8 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  transform: scale(1) skew(0deg) translateX(0);
-  transition: all 3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: scale(1);
+  transition: transform 0.5s ease;
 }
 .section-5__figure > a > img {
   width: inherit;
@@ -499,12 +517,8 @@
 .section-5__figure > a:nth-child(1) {
   grid-area: img00;
 }
-.section-5__figure > a:nth-child(1):hover {
-  transform: scale(1.1) skew(1deg) translateX(50%);
-  z-index: 5;
-}
-.section-5__figure > a:nth-child(2):hover, .section-5__figure > a:nth-child(3):hover {
-  transform: scale(1.1) skew(1deg) translateX(-50%);
+.section-5__figure > a:hover {
+  transform: scale(1.1);
   z-index: 5;
 }
 

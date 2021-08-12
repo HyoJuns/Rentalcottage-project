@@ -58,14 +58,18 @@ $font-name-default : 'Noto Sans KR';
     background-image: url('../images/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
-
     @include fun.FlexboxSetting();
 
     &::before
     {
-        @include fun.virtualSetting;
+        @include fun.virtualSetting(1);
+        transition: background-color 1s ease;
     }
 
+    &.active::before
+    {
+        background-color: hsla(0,100%,0%,.7);
+    }
 
     // Main Title
     &__mainTitle
@@ -132,6 +136,8 @@ $font-name-default : 'Noto Sans KR';
 .section-2
 {
     
+    
+
     overflow: hidden;
     &__title
     {
@@ -145,6 +151,9 @@ $font-name-default : 'Noto Sans KR';
 
         @include fun.Debug(red);
         background-color: $color-white;
+
+        opacity: 0;
+
     }
 
     // 정렬 컨테이너
@@ -184,7 +193,8 @@ $font-name-default : 'Noto Sans KR';
             object-fit: cover;
         }
         color : $color-white;
-        
+        opacity: 0.4;
+        transition: opacity .7s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     &__text
@@ -224,6 +234,25 @@ $font-name-default : 'Noto Sans KR';
         {
             color : #C8E21D;
             border : 2px solid #fff;
+        }
+    }
+
+    &.active
+    {
+        .section-2
+        {
+            &__title
+            {
+                opacity: 1;
+
+                transition: opacity .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+
+            &__template
+            {
+                opacity: 1;
+                transition: opacity .7s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
         }
     }
 }
@@ -361,6 +390,11 @@ $font-name-default : 'Noto Sans KR';
             transform: perspective(500px) rotateY(0deg);
         }
         // overflow: hidden;
+
+        &.reverse
+        {
+            transform: perspective(500px) rotateY(-180deg);
+        }
     }
 }
 
@@ -419,43 +453,31 @@ $font-name-default : 'Noto Sans KR';
             z-index: 1;
             width: 100%;
             height: 100%;
-            transform: scale(1) skew(0deg) translateX(0);
+            transform: scale(1);
+            transition: transform .5s ease;
             & > img
             {
                 width: inherit;
                 height: inherit;
                 object-fit: cover;
             }
-
+            
             &:nth-child(1)
             {
 
-                &:hover
-                {
-                    transform: scale(1.1) skew(1deg) translateX(50%);
-                    z-index: 5;
-                }
                 grid-area: img00;
             }
-
-
-            transition: all 3s cubic-bezier(0.215, 0.610, 0.355, 1);
-
-            &:nth-child(2),
-            &:nth-child(3)
+            &:hover
             {
-                &:hover
-                {
-                    transform: scale(1.1) skew(1deg) translateX(-50%);
-                    z-index: 5;
-                }
+                transform: scale(1.1);
+                z-index: 5;
             }
+
         }
     }
 
     overflow: hidden;
 
-    
 }
 // #endregion
 
