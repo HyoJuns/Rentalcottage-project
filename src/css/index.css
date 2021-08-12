@@ -181,7 +181,7 @@
   font-size: 4.2em;
   color: white;
   position: relative;
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   text-shadow: 0.1em 0.1em 4em #fff, 0.1rem 0.1rem 0.2rem #666;
   letter-spacing: 0.5rem;
   transition: font-size 0.4s ease;
@@ -272,13 +272,13 @@
   display: inline-block;
   margin: 2em 0;
   padding: 0.5em 2em;
-  border: 2px solid #C8E21D;
+  border: 2px solid #c8e21d;
   border-radius: 25px;
   color: #fff;
   transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .section-2__button:hover {
-  color: #C8E21D;
+  color: #c8e21d;
   border: 2px solid #fff;
 }
 .section-2.active .section-2__title {
