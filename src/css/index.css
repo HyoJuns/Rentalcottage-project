@@ -249,8 +249,8 @@
   opacity: 0.4;
   transition: opacity 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
 }
 .section-2__template > video {
