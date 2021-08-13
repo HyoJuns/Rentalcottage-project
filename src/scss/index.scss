@@ -118,11 +118,11 @@ $font-name-default: "Noto Sans KR";
         color: hsl(189, 77.3%, 50%);
         text-shadow: 0.1rem 0.1rem 0.1rem hsla(0, 100%, 0%, 0.7);
 
-        margin-top: 1em;
-        margin-bottom: 1em;
+        margin-top: .5em;
+        margin-bottom: 2em;
 
         @include fun.Debug(red);
-        background-color: $color-white;
+        // background-color: $color-white;
 
         opacity: 0;
     }
