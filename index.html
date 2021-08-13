@@ -30,81 +30,12 @@
 
 
     <script src="./src/scripts/main.js" defer></script>
+    <script src="./src/scripts/myHeader.js" defer></script>
 </head>
 
 <body>
-    <!-- #region Header  -->
-    <header class="header" slot="header">
 
-        <!-- wrap -->
-        <div class="header__wrap">
-            <!-- flex 박스 컨테이너 -->
-            <div class="header__flexbox">
-                <figure class="header__logo">
-                    <a href="./index.html">
-                        <img src="./src/images/LOGO.png" alt="LOGO">
-                    </a>
-
-                </figure>
-
-                <!-- 메뉴 -->
-                <nav class="header__gnb">
-                    <ul class="gnb">
-                        <li class="gnb__item">
-                            <a href="./subpage_about.html" target="_blank">
-                                펜션소개
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="./subpage_roompreview.html" target="_blank">
-                                객실소개
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="./subpage_special.html" target="_blank">
-                                펜션스페셜
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="./subpage_service.html" target="_blank">
-                                펜션서비스
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="./subpage_travel.html" target="_blank">
-                                주변여행지
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="#">
-                                예약안내
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="#">
-                                커뮤니티
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- ICON -->
-                <ul class="header__icon">
-                    <li class="icon__item">
-                        <a href="#">
-                            <span class="icon-bank"></span>
-                        </a>
-                    </li>
-                    <li class="icon__item">
-                        <a href="#">
-                            <span class="icon-location2"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <!-- #endregion -->
+    <my-header></my-header>
 
     <!-- Section-1 -->
     <section class="section-1" slot="section">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
     <!-- 검색엔진 키워드 -->
     <meta name="keyword" content="펜션">
@@ -17,81 +17,11 @@
     <link rel="stylesheet" type="text/css" href="./src/css/common.css">
 
     <link rel="stylesheet" type="text/css" href="./src/css/sub_travel.css">
+    <script src="./src/scripts/myHeader.js" defer></script>
     <title>여행</title>
 </head>
 <body>
-    <!-- #region Header  -->
-    <header class="header" slot="header">
-
-        <!-- wrap -->
-        <div class="header__wrap">
-            <!-- flex 박스 컨테이너 -->
-            <div class="header__flexbox">
-                <figure class="header__logo">
-                    <a href="./index.html">
-                        <img src="./src/images/LOGO.png" alt="LOGO">
-                    </a>
-
-                </figure>
-
-                <!-- 메뉴 -->
-                <nav class="header__gnb">
-                    <ul class="gnb">
-                        <li class="gnb__item">
-                            <a href="about.html">
-                                펜션소개
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="#">
-                                객실소개
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="#">
-                                펜션스페셜
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="#">
-                                펜션서비스
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="./travel.html">
-                                주변여행지
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="#">
-                                예약안내
-                            </a>
-                        </li>
-                        <li class="gnb__item">
-                            <a href="./community.html">
-                                커뮤니티
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!-- ICON -->
-                <ul class="header__icon">
-                    <li class="icon__item">
-                        <a href="#">
-                            <span class="icon-bank"></span>
-                        </a>
-                    </li>
-                    <li class="icon__item">
-                        <a href="about.html#main">
-                            <span class="icon-location2"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <!-- #endregion -->
+    <my-header></my-header>
     <!-- visual -->
     <section class="section">
         <img src="./src/images/travelvisual.png" alt="about visual" class="section__image">
