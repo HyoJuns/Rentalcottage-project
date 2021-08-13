@@ -1,0 +1,123 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+// 헤더 배경화면
+$header-backgroundcolor: hsl(0, 0%, 0%, 0);
+
+// 해더 호버 배경화면
+$header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
+
+
+
+// Header Style Start
+.header {
+    // 크기 설정
+    width: 100%;
+    height: 100px;
+
+    background-color: $header-backgroundcolor;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    box-shadow: none;
+    z-index: 1000;
+
+    overflow: hidden;
+
+    transition: background-color 0.7s ease-in, box-shadow .7s linear;
+
+    // ! Hover
+    &:hover {
+        background-color: $header-backgroundcolor-hover;
+        box-shadow: 0.1rem 0.1rem 0.4rem rgb(27, 27, 27);
+    }
+
+    // Container
+    &__wrap {
+        @include fun.wrapSetting;
+    }
+
+    // Flexbox
+    &__flexbox {
+        width: inherit;
+        height: inherit;
+
+        @include fun.FlexboxSetting(row, space-between, center);
+    }
+
+    // LOGO
+    &__logo {
+        width: 10%;
+
+        @include fun.Debug();
+
+        // Image
+        & img {
+            width: 100%;
+            vertical-align: middle;
+        }
+    }
+
+    // GNB 메뉴
+    &__gnb {
+        @include fun.Debug(red);
+
+        width: 60%;
+    }
+
+    // Icon 메뉴
+    &__icon {
+        @include fun.Debug(yellow);
+
+        @include fun.FlexboxSetting(row, space-between, center, 1em);
+    }
+}
+.gnb {
+    width: 100%;
+
+    @include fun.FlexboxSetting(row, space-between, center, 1em);
+
+    &__item {
+        color: white;
+
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: hsl(189, 77.3%, 50%);
+        }
+        & > a{
+            padding: 1em 0;
+            letter-spacing: 2px;
+            color: inherit;
+        }
+    }
+}
+.icon__item {
+    & > a {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: white;
+        transition: color 0.3s ease-in;
+        &:hover {
+            color: hsl(189, 77.3%, 50%);
+        }
+    }
+}
+
+@include view.Tablet {
+    .header {
+        &__gnb {
+            @include fun.Debug(red);
+
+            width: 80%;
+        }
+        &__logo {
+            display: none;
+        }
+    }
+
+}

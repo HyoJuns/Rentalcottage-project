@@ -1,0 +1,62 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+@import '../variables.scss';
+
+
+.section__wrap
+{
+    @include fun.wrapSetting;
+}
+
+#greeting {
+    width:100%; 
+    margin: auto;
+    margin-bottom: 100pt; 
+    column-count: 2;
+    width:85%; 
+    max-width:1800px; 
+}
+
+#greeting img {
+    position: relative;
+    left: 150px;
+    width: 50%;
+}
+
+#main article h4 {
+    font-size: 3rem;
+
+}
+
+#main article .location {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#main article .location ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+#main article .location ul li {
+    width: 50%;
+    margin-bottom: 1em;
+    padding-left: 30px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    
+}
+
+#main article iframe {
+    margin-bottom: 100pt;
+}
+
+

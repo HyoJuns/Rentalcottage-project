@@ -1,0 +1,116 @@
+
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+// Footer Style Start
+
+.footer {
+    height: 300px;
+
+    background-color: hsl(0, 0%, 0%);
+
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 1em;
+
+    &__wrap {
+        @include fun.wrapSetting;
+    }
+
+    &__fnb {
+        @include fun.Debug(rgb(153, 158, 224));
+
+        width: 100%;
+        border-bottom: 2px solid #fff;
+    }
+
+    overflow: hidden;
+
+    &__left {
+        float: left;
+
+        color: white;
+    }
+
+    &__right {
+        float: right;
+        color: white;
+    }
+
+    &__text {
+        font-size: 0.8em;
+        padding: 1em 0;
+        line-height: 2;
+        & > a {
+            color: #fff;
+        }
+    }
+    &__address {
+        padding: 1em 0;
+        line-height: 2;
+    }
+    &__copyright {
+        padding-top: 10em;
+
+        color: #444;
+    }
+}
+
+.fnb {
+    &__container {
+        @include fun.FlexboxSetting(row, space-between, center);
+        gap: 1em;
+        width: 60%;
+        height: inherit;
+    }
+    &__item {
+        &:nth-child(1) {
+            padding-left: 0;
+        }
+        color: white;
+        padding: 1em;
+        & > a {
+            color: inherit;
+            letter-spacing: 2px;
+            text-decoration: none;
+            font-size: inherit;
+
+            transition: color 0.3s ease-in;
+            &:hover {
+                color: hsl(189, 77.3%, 50%);
+            }
+        }
+    }
+}
+
+// Footer Style End
+
+@include view.Desktop {
+    .fnb {
+        &__container
+        {
+            width: 80%;
+        }
+    }
+}
+
+@include view.Tablet {
+    .fnb {
+        font-size: 10px;
+        &__container
+        {
+            width: 80%;
+        }
+    }
+}
+
+@include view.Mobile {
+    .fnb {
+        font-size: 10px;
+        &__container
+        {
+            width: 100%;
+        }
+    }
+}

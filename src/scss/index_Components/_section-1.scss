@@ -1,0 +1,95 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+@use '../variables' as let; 
+.section-1 {
+    height: 100vh;
+
+    background-color: hsla(0, 100%, 0%);
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include fun.FlexboxSetting();
+
+    &::before {
+        @include fun.virtualSetting(1);
+        transition: background-color 1s ease;
+    }
+
+    &.active::before {
+        background-color: hsla(0, 100%, 0%, 0.7);
+    }
+
+    // Main Title
+    &__mainTitle {
+        font-size: let.$font-size-mainTitle;
+        color: let.$color-white;
+
+        position: relative;
+
+        font-family: let.$font-name-default, sans-serif;
+
+        text-shadow: 0.1em 0.1em 4em #fff, 0.1rem 0.1rem 0.2rem #666;
+        letter-spacing: 0.5rem;
+        transition: font-size 0.4s ease;
+        @include fun.Debug(blue);
+    }
+
+    // Scroll
+    &__scroll {
+        position: absolute;
+
+        bottom: 2em;
+        left: 50%;
+        text-align: center;
+
+        transform: translateX(-50%);
+
+        &Text {
+            font-size: 1em;
+
+            text-transform: uppercase;
+            color: let.$color-white;
+            font-size: let.$font-size-smalltext;
+            letter-spacing: 0.1rem;
+        }
+        @include fun.Debug(green);
+    }
+}
+
+// ? V 이동
+@keyframes scrollMove {
+    0% {
+        bottom: 2em;
+    }
+    100% {
+        bottom: 6em;
+    }
+}
+
+@include view.Desktop {
+    .section-1 {
+        &__mainTitle {
+            font-size: let.$font-size-mainTitle;
+        }
+    }
+}
+
+@include view.Tablet {
+    .section-1 {
+        &__mainTitle {
+            font-size: let.$font-size-mainTitle / 1.2;
+        }
+    }
+}
+
+@include view.Mobile {
+    .section-1 {
+        &__mainTitle {
+            font-size: let.$font-size-mainTitle / 1.5;
+        }
+    }
+}

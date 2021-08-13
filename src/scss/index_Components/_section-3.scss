@@ -1,0 +1,14 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+@import '../variables.scss';
+
+.section-3 {
+    /* 100vh - header */
+    background-image: url("../images/section-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

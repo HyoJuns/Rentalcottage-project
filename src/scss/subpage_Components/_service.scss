@@ -1,0 +1,79 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+@import '../variables.scss';
+.box
+{
+    width: 100vw;
+    height: 100px;
+
+    background-color: black;
+}
+.section
+{
+    height: calc(100vh - 100px);
+
+    background-color: #444;
+
+    @supports (display : grid)
+    {
+        display: grid;
+
+        grid-template-columns: .25fr .25fr .25fr .25fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "a b c d";
+    }
+    
+}
+$area : a, b, c, d;
+.article
+{
+    position: relative;
+    @for $idx from 1 through 4
+    {
+        &:nth-child(#{$idx})
+        {
+            @supports (display : grid)
+            {
+                grid-area: nth($area, $idx);
+                
+            }
+
+            background-image: url('../images/service_' + #{$idx} +'.jpg');
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            // background-attachment: fixed;
+
+            &::before
+            {
+                @include fun.virtualSetting(.7);
+
+                
+            }
+        }
+    }
+
+    @include fun.FlexboxSetting;
+
+    color : white;
+
+
+    &__title
+    {
+        position: relative;
+
+        text-shadow: 0px 0px 1px #fff;
+
+        transition: text-shadow .7s ease;
+        text-align: center;
+    }
+
+    &:hover &__title
+    {
+        text-shadow: 0px 0px 10px #fff;
+    }
+}

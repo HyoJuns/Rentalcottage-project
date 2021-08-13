@@ -1,0 +1,8 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+
+@include fun.sectionLoop(6);

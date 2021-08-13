@@ -56,6 +56,11 @@
 html {
   font-size: 62.5%;
 }
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 50.5%;
+  }
+}
 
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -66,6 +71,21 @@ body {
   overflow-x: hidden;
   color: #444444;
   scroll-behavior: smooth;
+}
+@media screen and (max-width: 1440px) and (min-width: 769px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 img {

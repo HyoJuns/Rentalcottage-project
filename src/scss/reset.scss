@@ -1,5 +1,5 @@
-
-
+// 미디어쿼리 설정
+@use './media' as view;
 
 /* Reset */
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
@@ -64,6 +64,11 @@
 html
 {
     font-size: 62.5%;
+
+    @include view.Mobile
+    {
+        font-size: 50.5%;
+    }
 }
 
 body
@@ -80,6 +85,19 @@ body
 
     color : hsl(0,0%,26.7%);
     scroll-behavior: smooth;
+
+    @include view.Desktop
+    {
+        font-size: 1.4rem;
+    }
+    @include view.Tablet
+    {
+        font-size: 1.2rem;
+    }
+    @include view.Mobile
+    {
+        font-size: 1rem;
+    }
 }
 img
 {
