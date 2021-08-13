@@ -189,6 +189,10 @@
   body {
     font-size: 14px;
   }
+
+  .fnb__container {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 768px) and (min-width: 426px) {
   body {
@@ -200,6 +204,13 @@
   }
   .header__logo {
     display: none;
+  }
+
+  .fnb {
+    font-size: 10px;
+  }
+  .fnb__container {
+    width: 80%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -216,5 +227,12 @@
   }
   .header__logo {
     display: none;
+  }
+
+  .fnb {
+    font-size: 10px;
+  }
+  .fnb__container {
+    width: 100%;
   }
 }

@@ -199,6 +199,13 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 0.4);
     body {
         font-size: 14px;
     }
+
+    .fnb {
+        &__container
+        {
+            width: 80%;
+        }
+    }
 }
 
 @include view.Tablet {
@@ -213,6 +220,13 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 0.4);
         }
         &__logo {
             display: none;
+        }
+    }
+    .fnb {
+        font-size: 10px;
+        &__container
+        {
+            width: 80%;
         }
     }
 }
@@ -231,6 +245,13 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 0.4);
         }
         &__logo {
             display: none;
+        }
+    }
+    .fnb {
+        font-size: 10px;
+        &__container
+        {
+            width: 100%;
         }
     }
 }
