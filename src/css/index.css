@@ -603,6 +603,11 @@
   background-color: whitesmoke;
 }
 
+.section-6__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section-6__gallery {
   width: inherit;
   height: 400px;
