@@ -47,12 +47,12 @@ class MyHeader extends HTMLElement {
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="#">
+                            <a href="./subpage_reservation.html" target="_blank">
                                 예약안내
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="#">
+                            <a href="./subpage_community.html" target="_blank">
                                 커뮤니티
                             </a>
                         </li>

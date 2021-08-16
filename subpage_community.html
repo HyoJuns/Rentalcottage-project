@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>커뮤니티</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
+    <!-- 초기화 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+
+    <!-- header, footer 적용 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/common.css">
+
+    <!-- about 적용 -->
+    <!--    <link rel="stylesheet" type="text/css" href="./src/css/sub_preview.css">-->
+
+    <script src="./src/plugin/jquery-3.6.0.min.js" defer></script>
+    <script src="./src/scripts/myHeader.js" defer></script>
+    <script src="./src/scripts/sub_community.js" defer></script>
+</head>
+
+<body>
+    <my-header></my-header>
+    <link rel="stylesheet" type="text/css" href="./src/css/sub_community.css">
+    <section class="section">
+        <img src="./src/images/room.jpg" alt="room visual" class="section__image">
+        <div class="section__text">
+            <h3>COMMUNITY</h3>
+            <h5>질문 장소</h5>
+        </div>
+    </section>
+    <ul class="community community__list">
+        <li class="community__item active" data-show="community__notice">
+            공지사항
+            <div class="line"></div>
+        </li>
+        <li class="community__item" data-show="community__faq">
+            FAQ
+            <div class="line"></div>
+        </li>
+        <li class="community__item" data-show="community__review">
+            이용후기
+            <div class="line"></div>
+        </li>
+    </ul>
+    <section class="community community__notice show">
+        <table class="community__table">
+            <thead>
+                <tr>
+                    <th>
+                        번호
+                    </th>
+                    <th>제목</th>
+                    <th>
+                        글쓴이
+                    </th>
+                    <th>작성일</th>
+                    <th>
+                        조회
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">복층 커텐 설치 하였습니다.</a></td>
+                    <td>관리자</td>
+                    <td>2021-08-01</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">행복펜션 홈페이지가 새롭게 오픈하였습니다..</a></td>
+                    <td>관리자</td>
+                    <td>2021-08-01</td>
+                    <td>777</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <section class="community community__faq">
+        <table class="community__table">
+            <thead>
+                <tr>
+                    <th>
+                        번호
+                    </th>
+                    <th>제목</th>
+                    <th>
+                        글쓴이
+                    </th>
+                    <th>작성일</th>
+                    <th>
+                        조회
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">예약 취소 및 환불 정책</a></td>
+                    <td>관리자</td>
+                    <td>2021-08-04</td>
+                    <td>472</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">오시는 방법</a></td>
+                    <td>관리자</td>
+                    <td>2021-08-01</td>
+                    <td>777</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <section class="community community__review">
+        <table class="community__table">
+            <thead>
+                <tr>
+                    <th>
+                        번호
+                    </th>
+                    <th>제목</th>
+                    <th>
+                        글쓴이
+                    </th>
+                    <th>작성일</th>
+                    <th>
+                        조회
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td><a href="#">바퀴벌레가 나옵니다.</a></td>
+                    <td>A</td>
+                    <td>2021-08-06</td>
+                    <td>123</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="#">잘 쉬다 갑니다.</a></td>
+                    <td>B</td>
+                    <td>2021-08-04</td>
+                    <td>295</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__wrap">
+            <nav class="footer__fnb">
+                <ul class="fnb__container">
+                    <li class="fnb__item">
+                        <a href="#">펜션소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">객실소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션스페셜</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션서비스</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">주변여행지</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">예약안내</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__left">
+                <p class="footer__text">
+                    상호 : 행복펜션<br>
+                    예약전화 : <a href="tel:031-585-8232">031-585-8232</a>
+                </p>
+                <address class="footer__address">
+                    주소 : 경기포 가평군 상면 수목원로 128<br>
+                    (구주소 : 경기도 가평군 상면 행현리 332-2번지)
+                </address>
+                <small class="footer__copyright">
+                    COPYRIGHT(c) ALL RIGHTS RESERVED. (주) 팬션뱅크
+                </small>
+            </div>
+            <div class="footer__right">
+                <p class="footer__text">
+                    사업자 번호 : 879-44-00531<br>
+                    계좌번호 : 농협 351-1085-1544-03 조미선
+                </p>
+                <p class="footer__text">
+                    이 사이트는 포트폴리오 용도로 제작되었습니다.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+</body>
+
+</html>

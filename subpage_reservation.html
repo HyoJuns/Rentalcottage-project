@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>예약 안내</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="./src/images/icon.svg">
+    <!-- 초기화 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/reset.css">
+
+    <!-- header, footer 적용 -->
+    <link rel="stylesheet" type="text/css" href="./src/css/common.css">
+
+    <link rel="stylesheet" type="text/css" href="./src/css/sub_reservation.css">
+    <script src="./src/plugin/jquery-3.6.0.min.js" defer></script>
+    <script src="./src/scripts/myHeader.js" defer></script>
+    <script src="./src/scripts/sub_reservation.js" defer></script>
+</head>
+
+<body>
+    <my-header></my-header>
+
+    <section class="section">
+        <img src="./src/images/room.jpg" alt="room visual" class="section__image">
+        <div class="section__text">
+            <h3>RESERVATION</h3>
+            <h5>예약 홈페이지</h5>
+        </div>
+    </section>
+    <ul class="reservation reservation__list">
+        <li class="reservation__item active" data-name="reservation__realtime">
+            실시간 예약
+            <div class="line"></div>
+        </li>
+        <li class="reservation__item" data-name="reservation__guide">
+            요금가이드
+            <div class="line"></div>
+        </li>
+    </ul>
+    <section class="reservation reservation__realtime show">
+
+        <table class="reservation__table">
+            <caption>
+                숙박기간
+            </caption>
+            <thead>
+                <tr>
+                    <th>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22.347" height="25.539"
+                            viewBox="0 0 22.347 25.539">
+                            <path id="Icon_awesome-calendar-alt" data-name="Icon awesome-calendar-alt"
+                                d="M0,23.145a2.4,2.4,0,0,0,2.394,2.394H19.952a2.4,2.4,0,0,0,2.394-2.394V9.577H0Zm15.962-9.777a.6.6,0,0,1,.6-.6h2a.6.6,0,0,1,.6.6v2a.6.6,0,0,1-.6.6h-2a.6.6,0,0,1-.6-.6Zm0,6.385a.6.6,0,0,1,.6-.6h2a.6.6,0,0,1,.6.6v2a.6.6,0,0,1-.6.6h-2a.6.6,0,0,1-.6-.6ZM9.577,13.368a.6.6,0,0,1,.6-.6h2a.6.6,0,0,1,.6.6v2a.6.6,0,0,1-.6.6h-2a.6.6,0,0,1-.6-.6Zm0,6.385a.6.6,0,0,1,.6-.6h2a.6.6,0,0,1,.6.6v2a.6.6,0,0,1-.6.6h-2a.6.6,0,0,1-.6-.6ZM3.192,13.368a.6.6,0,0,1,.6-.6h2a.6.6,0,0,1,.6.6v2a.6.6,0,0,1-.6.6h-2a.6.6,0,0,1-.6-.6Zm0,6.385a.6.6,0,0,1,.6-.6h2a.6.6,0,0,1,.6.6v2a.6.6,0,0,1-.6.6h-2a.6.6,0,0,1-.6-.6Zm16.76-16.56H17.558V.8a.8.8,0,0,0-.8-.8h-1.6a.8.8,0,0,0-.8.8V3.192H7.981V.8a.8.8,0,0,0-.8-.8h-1.6a.8.8,0,0,0-.8.8V3.192H2.394A2.4,2.4,0,0,0,0,5.587V7.981H22.347V5.587A2.4,2.4,0,0,0,19.952,3.192Z"
+                                fill="#fff" />
+                        </svg>
+                    </th>
+                    <th>입사일</th>
+                    <th>
+                        <label for="user_inputDate">
+                            <input type="date" class="input__date" id="user_inputDate">
+                        </label>
+                    </th>
+                    <th>퇴사일</th>
+                    <th>
+                        <label for="user_outputDate">
+                            <input type="date" class="output__date" id="user_outputDate">
+                        </label>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+        </table>
+        <table class="reservation__table">
+            <caption>
+                객실선택
+            </caption>
+            <thead>
+                <tr>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        선택하신 날짜는 예약 할 수 있는 객실이 존재하지 않습니다.
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+
+            </tbody>
+
+        </table>
+    </section>
+    <section class="reservation reservation__guide">
+        <table class="reservation__table">
+            <caption>
+                요금가이드
+            </caption>
+            <thead>
+                <tr>
+                    <th>
+                        객실 이름
+                    </th>
+                    <th>
+                        준성수기
+                    </th>
+                    <th>
+                        성수기
+                    </th>
+                    <th>
+                        비수기
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        카라반 A,B
+                    </td>
+                    <td>
+                        90,000
+                    </td>
+                    <td>
+                        150,000
+                    </td>
+                    <td>
+                        60,000
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        사랑 1호 ~ 4호
+                    </td>
+                    <td>
+                        140,000
+                    </td>
+                    <td>
+                        190,000
+                    </td>
+                    <td>
+                        90,000
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        행복 1호 ~ 4호
+                    </td>
+                    <td>
+                        160,000
+                    </td>
+                    <td>
+                        220,000
+                    </td>
+                    <td>
+                        110,000
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__wrap">
+            <nav class="footer__fnb">
+                <ul class="fnb__container">
+                    <li class="fnb__item">
+                        <a href="#">펜션소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">객실소개</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션스페셜</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">펜션서비스</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">주변여행지</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">예약안내</a>
+                    </li>
+                    <li class="fnb__item">
+                        <a href="#">커뮤니티</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer__left">
+                <p class="footer__text">
+                    상호 : 행복펜션<br>
+                    예약전화 : <a href="tel:031-585-8232">031-585-8232</a>
+                </p>
+                <address class="footer__address">
+                    주소 : 경기포 가평군 상면 수목원로 128<br>
+                    (구주소 : 경기도 가평군 상면 행현리 332-2번지)
+                </address>
+                <small class="footer__copyright">
+                    COPYRIGHT(c) ALL RIGHTS RESERVED. (주) 팬션뱅크
+                </small>
+            </div>
+            <div class="footer__right">
+                <p class="footer__text">
+                    사업자 번호 : 879-44-00531<br>
+                    계좌번호 : 농협 351-1085-1544-03 조미선
+                </p>
+                <p class="footer__text">
+                    이 사이트는 포트폴리오 용도로 제작되었습니다.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- End of footer -->
+</body>
+
+</html>

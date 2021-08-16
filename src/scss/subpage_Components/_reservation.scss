@@ -1,0 +1,101 @@
+// 미디어쿼리 설정
+@use '../media' as view;
+
+// 커스텀 설정
+@use '../mixin' as fun;
+
+@import "../variables.scss";
+
+a {
+    color: inherit;
+}
+
+.reservation {
+    @include fun.wrapSetting();
+    text-align: center;
+    height: 100vh;
+
+    // List
+    &__list {
+        height: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        font-size: $font-size-subTitle;
+        font-weight: bold;
+
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        position: relative;
+
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.3s;
+        &.active {
+            color: #1dc5e2;
+
+            & > .line {
+                width: 150%;
+                height: 10px;
+                background-color: #1dc5e2;
+
+                position: absolute;
+                bottom: -2rem;
+                left: 50%;
+
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    // Table
+    &__table {
+        width: inherit;
+        border: 1px solid #444;
+        border-left: none;
+        border-right: none;
+        border-collapse: collapse;
+        margin-bottom: 8rem;
+        @at-root & > thead {
+            background-color: #abd1d8;
+
+            & th {
+                padding: 1rem;
+                color: white;
+            }
+        }
+
+        @at-root & > tbody {
+            & tr {
+                padding: 1rem;
+                border: 1px solid #444;
+                border-left: none;
+                border-right: none;
+                & td {
+                    padding: 1rem;
+                }
+            }
+        }
+    }
+
+    &__realtime,
+    &__guide {
+        display: none;
+    }
+
+    &__realtime.show,
+    &__guide.show {
+        display: block;
+    }
+}
+
+caption {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 1rem;
+}

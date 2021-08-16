@@ -1,0 +1,144 @@
+.section {
+  margin-bottom: 10rem;
+  position: relative;
+  font-family: "Noto Sans KR", sans-serif;
+  color: white;
+}
+.section__image {
+  width: 100%;
+  height: 550px;
+  filter: brightness(80%);
+  object-fit: cover;
+}
+.section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.section__text {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 550px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+.section__text > h3 {
+  font-weight: bold;
+  font-size: 4.2em;
+  text-shadow: 2px 2px 1px #444;
+  letter-spacing: 4px;
+}
+.section__text > h5 {
+  font-weight: 400;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+}
+.section__title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  color: #1DC5E2;
+}
+
+a {
+  color: inherit;
+}
+
+.community {
+  width: 1440px;
+  height: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+}
+@media screen and (max-width: 1440px) and (min-width: 769px) {
+  .community {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .community {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .community {
+    width: 90vw;
+  }
+}
+.community__list {
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.community__item {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s;
+}
+.community__item.active {
+  color: #1dc5e2;
+}
+.community__item.active > .line {
+  width: 150%;
+  height: 10px;
+  background-color: #1dc5e2;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.community__table {
+  width: inherit;
+  border: 1px solid #444;
+  border-collapse: collapse;
+}
+.community__table > thead {
+  background-color: #abd1d8;
+}
+.community__table > thead th {
+  padding: 1rem;
+  color: white;
+}
+.community__table > thead th:nth-child(2) {
+  width: 60%;
+}
+
+.community__table > tbody tr {
+  padding: 1rem;
+  border: 1px solid #444;
+}
+.community__table > tbody tr td {
+  padding: 1rem;
+}
+
+.community__notice, .community__faq, .community__review {
+  display: none;
+}
+.community__notice.show {
+  display: block;
+}
+.community__faq.show {
+  display: block;
+}
+.community__review.show {
+  display: block;
+}
