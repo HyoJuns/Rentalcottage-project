@@ -228,6 +228,12 @@
   height: 100vh;
   overflow: hidden;
 }
+.section-2__wrap {
+  height: calc(100% - 200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .section-2__title {
   font-size: 2.5em;
   text-transform: uppercase;
@@ -603,11 +609,6 @@
   background-color: whitesmoke;
 }
 
-.section-6__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .section-6__gallery {
   width: inherit;
   height: 400px;

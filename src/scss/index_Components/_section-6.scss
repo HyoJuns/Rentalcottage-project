@@ -8,11 +8,7 @@
 
 .section-6 {
     @include fun.styleSetting-font("section-6");
-    &__wrap {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
     overflow: hidden;
     &__gallery {
         width: inherit;

@@ -5,18 +5,24 @@
 @use '../mixin' as fun;
 
 // 변수 설정
-@import '../variables.scss';
+@import "../variables.scss";
 
 .section-2 {
     height: 100vh;
     overflow: hidden;
+    &__wrap {
+        height: calc(100% - 200px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__title {
         font-size: 2.5em;
         text-transform: uppercase;
         color: hsl(189, 77.3%, 50%);
         text-shadow: 0.1rem 0.1rem 0.1rem hsla(0, 100%, 0%, 0.7);
 
-        margin-top: .5em;
+        margin-top: 0.5em;
         margin-bottom: 2em;
 
         @include fun.Debug(red);
@@ -63,8 +69,6 @@
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
-
-        
     }
 
     &__text {
@@ -119,9 +123,7 @@
     }
 }
 
-
-@include view.Tablet
-{
+@include view.Tablet {
     .section-2 {
         &__flexbox {
             @include fun.FlexboxSetting(column, center, center, 2em);
@@ -137,8 +139,7 @@
         }
     }
 }
-@include view.Mobile
-{
+@include view.Mobile {
     .section-2 {
         &__flexbox {
             @include fun.FlexboxSetting(column, center, center, 2em);
