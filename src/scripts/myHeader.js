@@ -12,7 +12,7 @@ class MyHeader extends HTMLElement {
                 <div class="header__wrap">
                     <div class="header__flexbox">
                         <figure class="header__logo">
-                        <a href="./src/index.html">
+                        <a href="./index.html">
                             <img src="./src/images/LOGO.png" alt="LOGO">
                         </a>
 
