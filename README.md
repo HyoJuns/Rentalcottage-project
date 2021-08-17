@@ -8,7 +8,6 @@
   - [목차](#목차)
   - [링크](#링크)
   - [스크린샷](#스크린샷)
-    - [시안](#시안)
     - [데스크탑](#데스크탑)
     - [모바일](#모바일)
   - [작업내용](#작업내용)
@@ -22,23 +21,19 @@
 
 ## 스크린샷
 
-### 시안
-
-![시안](./error.png)
-
--   파일이 없다.
-
 ### 데스크탑
 
-![시안](./error.png)
+![데스크탑](./screenshots/background_desktop.png)
+![서브페이지](screenshots/about_desktop.png)
+![서브페이지](screenshots/room_desktop.png)
 
--   파일이 없다.
+-   그 외는 알아서 확인바람
 
 ### 모바일
 
-![시안](./error.png)
-
--   파일이 없다.
+![모바일](screenshots/background_mobile.png)
+![서브페이지](screenshots/about_mobile.png)
+![서브페이지](screenshots/room_mobile.png)
 
 ## 작업내용
 
@@ -50,11 +45,11 @@
     -   Flex
 -   JavaSCript
 -   Jquery
--   animeJS
+-   animeJS (아주조금)
 
 ### 공부
 
--   많은 걸 배울 것이다.
+-   다양한것을 도전해 봤다.
 
 ## 리뉴얼 전 작품
 

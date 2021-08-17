@@ -4,21 +4,19 @@
 // 커스텀 설정
 @use '../mixin' as fun;
 
-@import '../variables.scss';
+@import "../variables.scss";
 
-
-.section__wrap
-{
+.section__wrap {
     @include fun.wrapSetting;
 }
 
 #greeting {
-    width:100%; 
+    width: 100%;
     margin: auto;
-    margin-bottom: 100pt; 
+    margin-bottom: 100pt;
     column-count: 2;
-    width:85%; 
-    max-width:1800px; 
+    width: 85%;
+    max-width: 1800px;
 }
 
 #greeting img {
@@ -29,7 +27,6 @@
 
 #main article h4 {
     font-size: 3rem;
-
 }
 
 #main article .location {
@@ -51,12 +48,31 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
-    
 }
 
 #main article iframe {
     margin-bottom: 100pt;
 }
 
-
+@include view.Tablet {
+    #main article h4 {
+        font-size: 2rem;
+    }
+    #greeting img {
+        left: 0;
+    }
+    #main article .location ul li {
+        width: 60%;
+    }
+}
+@include view.Mobile {
+    #greeting img {
+        left: 0;
+    }
+    #main article h4 {
+        font-size: 2rem;
+    }
+    #main article .location ul li {
+        width: 60%;
+    }
+}

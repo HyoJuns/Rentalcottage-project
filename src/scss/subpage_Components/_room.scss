@@ -4,27 +4,22 @@
 // 커스텀 설정
 @use '../mixin' as fun;
 
-@import '../variables.scss';
+@import "../variables.scss";
 
-#main
-{
+#main {
     @include fun.wrapSetting;
 }
-.room
-{
-    &__container
-    {
-        
+.room {
+    &__container {
         height: 1320px;
 
         @include fun.FlexboxSetting(row, space-between, center, 2em);
         flex-wrap: wrap;
 
-        margin : 0 0 10rem;
+        margin: 0 0 10rem;
     }
 
-    &__card
-    {
+    &__card {
         width: calc(300px + (20px * 2));
         height: 250px;
 
@@ -33,40 +28,130 @@
         text-align: center;
     }
 
-    &__image
-    {
+    &__image {
         width: inherit;
         height: inherit;
 
-        & > img
-        {
+        & > img {
             width: inherit;
             height: inherit;
             object-fit: cover;
         }
     }
 
-    &__text
-    {
-        &:nth-child(1)
-        {
+    &__text {
+        &:nth-child(1) {
             margin-top: 1rem;
         }
 
-        & > small
-        {
-            font-size: .6em;
+        & > small {
+            font-size: 0.6em;
         }
 
-        & > a
-        {
-            color : $color-cyan;
+        & > a {
+            color: $color-cyan;
             font-weight: bold;
         }
     }
 }
 
-h5
-{
+h5 {
+    font-size: 1.2em;
     text-align: center;
+}
+
+@include view.Tablet {
+    .room {
+        &__container {
+            width: 90vw;
+            height: auto;
+            @include fun.FlexboxSetting(row, space-evenly, center);
+        }
+        &__card {
+            width: 200px;
+            height: 200px;
+            margin: 5rem;
+
+            &--hidden {
+                display: none;
+            }
+        }
+        &__image {
+            width: inherit;
+            height: inherit;
+
+            & > img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+
+        &__text {
+            &:nth-child(1) {
+                margin-top: 1rem;
+            }
+
+            & > small {
+                font-size: 0.6em;
+            }
+
+            & > a {
+                color: $color-cyan;
+                font-weight: bold;
+            }
+        }
+    }
+
+    h5 {
+        font-size: 1.2em;
+        margin-bottom: 2rem;
+    }
+}
+@include view.Mobile {
+    .room {
+        &__container {
+            width: 90vw;
+            height: auto;
+            @include fun.FlexboxSetting(row, space-evenly, center);
+        }
+        &__card {
+            width: 200px;
+            height: 200px;
+            margin: 5rem;
+            &--hidden {
+                display: none;
+            }
+        }
+        &__image {
+            width: inherit;
+            height: inherit;
+
+            & > img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+
+        &__text {
+            &:nth-child(1) {
+                margin-top: 1rem;
+            }
+
+            & > small {
+                font-size: 0.6em;
+            }
+
+            & > a {
+                color: $color-cyan;
+                font-weight: bold;
+            }
+        }
+    }
+
+    h5 {
+        font-size: 1.2em;
+        margin-bottom: 2rem;
+    }
 }

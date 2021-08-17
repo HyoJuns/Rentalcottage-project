@@ -4,43 +4,37 @@
 // 커스텀 설정
 @use '../mixin' as fun;
 
-@import '../variables.scss';
-.section
-{
+@import "../variables.scss";
+.section {
     margin-bottom: 10rem;
-    position : relative;
-    &__image
-    {
-        width:100%;
+    position: relative;
+    &__image {
+        width: 100%;
         height: 550px;
         filter: brightness(80%);
         object-fit: cover;
-
-        
     }
-    &::before
-        {
-            content: '';
+    &::before {
+        content: "";
 
-            position : absolute;
-            left : 0;
-            top : 0;
+        position: absolute;
+        left: 0;
+        top: 0;
 
-            width: 100%;
-            height: 550px;
+        width: 100%;
+        height: 550px;
 
-            background-color: rgba(0,0,0,.3);
-            z-index: 1;
-        }
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
     font-family: $font-name-default, sans-serif;
     // @include fun.FlexboxSetting(row, center, center, 1rem);
-    
-    color : $color-white;
 
-    &__text
-    {
+    color: $color-white;
+
+    &__text {
         position: absolute;
-        top : 0;
+        top: 0;
         width: 100%;
         height: 550px;
         z-index: 2;
@@ -48,8 +42,7 @@
 
         // background-color: black;
 
-        & > h3
-        {
+        & > h3 {
             font-weight: bold;
             font-size: $font-size-mainTitle;
 
@@ -57,18 +50,30 @@
             letter-spacing: 4px;
         }
 
-        & > h5
-        {
+        & > h5 {
             font-weight: 400;
             font-size: $font-size-middletext;
             letter-spacing: 4px;
         }
     }
-    &__title
-    {
+    &__title {
         text-align: center;
         margin-bottom: 50px;
         font-size: 3rem;
-        color: #1DC5E2;
+        color: #1dc5e2;
+    }
+}
+@include view.Tablet {
+    .section {
+        &__title {
+            font-size: 2rem;
+        }
+    }
+}
+@include view.Mobile {
+    .section {
+        &__title {
+            font-size: 1.5rem;
+        }
     }
 }

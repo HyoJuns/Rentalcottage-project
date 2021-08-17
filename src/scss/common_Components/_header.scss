@@ -215,8 +215,51 @@ $hamburgerSize: 64px;
 }
 @include view.Mobile {
     .header {
-        &__hamburger {
-            display: block;
+        &__gnb {
+            // @include fun.Debug(red);
+
+            width: 80%;
         }
+
+        &__hamburger {
+            display: inline-block;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            z-index: 1000;
+        }
+        &__gnb {
+            position: fixed;
+
+            // @include fun.Debug(red);
+
+            width: 30%;
+            // 300px 이동
+            height: 0px;
+            top: 100px;
+            left: 50%;
+
+            z-index: 100;
+            transform: translateX(-50%);
+            transition: all 0.4s ease;
+            background-color: black;
+            overflow: hidden;
+
+            &--open {
+                height: 300px;
+                background-color: rgba(0, 0, 0, 0);
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 1);
+                }
+            }
+        }
+    }
+    .gnb {
+        height: 300px;
+        padding: 1rem;
+        @include fun.FlexboxSetting(column, space-between, center, 1em);
     }
 }
