@@ -20,37 +20,37 @@ class MyHeader extends HTMLElement {
                         <nav class="header__gnb">
                     <ul class="gnb">
                         <li class="gnb__item">
-                            <a href="./subpage_about.html" target="_blank">
+                            <a href="./subpage_about.html">
                                 펜션소개
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="./subpage_roompreview.html" target="_blank">
+                            <a href="./subpage_roompreview.html">
                                 객실소개
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="./subpage_special.html" target="_blank">
+                            <a href="./subpage_special.html">
                                 펜션스페셜
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="./subpage_service.html" target="_blank">
+                            <a href="./subpage_service.html">
                                 펜션서비스
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="./subpage_travel.html" target="_blank">
+                            <a href="./subpage_travel.html">
                                 주변여행지
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="./subpage_reservation.html" target="_blank">
+                            <a href="./subpage_reservation.html">
                                 예약안내
                             </a>
                         </li>
                         <li class="gnb__item">
-                            <a href="./subpage_community.html" target="_blank">
+                            <a href="./subpage_community.html">
                                 커뮤니티
                             </a>
                         </li>
@@ -123,25 +123,25 @@ class Myfooter extends HTMLElement {
             <nav class="footer__fnb">
                 <ul class="fnb__container">
                     <li class="fnb__item">
-                        <a href="#">펜션소개</a>
+                        <a href="./subpage_about.html">펜션소개</a>
                     </li>
                     <li class="fnb__item">
-                        <a href="#">객실소개</a>
+                        <a href="./subpage_roompreview.html">객실소개</a>
                     </li>
                     <li class="fnb__item">
-                        <a href="#">펜션스페셜</a>
+                        <a href="./subpage_special.html">펜션스페셜</a>
                     </li>
                     <li class="fnb__item">
-                        <a href="#">펜션서비스</a>
+                        <a href="./subpage_service.html">펜션서비스</a>
                     </li>
                     <li class="fnb__item">
-                        <a href="#">주변여행지</a>
+                        <a href="./subpage_travel.html">주변여행지</a>
                     </li>
                     <li class="fnb__item">
-                        <a href="#">예약안내</a>
+                        <a href="./subpage_reservation.html">예약안내</a>
                     </li>
                     <li class="fnb__item">
-                        <a href="#">커뮤니티</a>
+                        <a href="./subpage_community.html">커뮤니티</a>
                     </li>
                 </ul>
             </nav>
