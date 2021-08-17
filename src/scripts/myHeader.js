@@ -8,16 +8,16 @@ class MyHeader extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <header class="header slot="header">
-                <div class="header__wrap">
-                    <div class="header__flexbox">
-                        <figure class="header__logo">
-                        <a href="./index.html">
-                            <img src="./src/images/LOGO.png" alt="LOGO">
-                        </a>
+            <header class="header slot=" header">
+        <div class="header__wrap">
+            <div class="header__flexbox">
+                <figure class="header__logo">
+                    <a href="./index.html">
+                        <img src="./src/images/LOGO.png" alt="LOGO">
+                    </a>
 
-                        </figure>
-                        <nav class="header__gnb">
+                </figure>
+                <nav class="header__gnb">
                     <ul class="gnb">
                         <li class="gnb__item">
                             <a href="./subpage_about.html">
@@ -56,7 +56,12 @@ class MyHeader extends HTMLElement {
                         </li>
                     </ul>
                 </nav>
-
+                <!-- Hamburger -->
+                <div class="header__hamburger">
+                    <span class="hamburger__line hamburger__line--first"></span>
+                    <span class="hamburger__line hamburger__line--second"></span>
+                    <span class="hamburger__line hamburger__line--third"></span>
+                </div>
                 <!-- ICON -->
                 <ul class="header__icon">
                     <li class="icon__item">
@@ -70,9 +75,9 @@ class MyHeader extends HTMLElement {
                         </a>
                     </li>
                 </ul>
-                    </div>
-                </div>
-            </header>
+            </div>
+        </div>
+    </header>
         `;
     }
 
@@ -94,11 +99,12 @@ class MyHeader extends HTMLElement {
     // 변경할 변수가 있으면 자동으로 업데이트 시켜준다.
     // 실시간 모니터링
     static get observedAttributes() {
-        return [];
+        return ["display"];
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
+    attributeChangedCallback(prop, oldValue, newValue) {
         // 위에 나열된 속성들 중 수정사항 발생시 호출한다.
+        if (prop === "display") this.render();
     }
 
     adoptedCallback() {

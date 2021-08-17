@@ -20,7 +20,7 @@
 }
 @media screen and (max-width: 1440px) and (min-width: 769px) {
   .section-2__wrap {
-    width: 960px;
+    width: 1200px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -49,7 +49,7 @@
 }
 @media screen and (max-width: 1440px) and (min-width: 769px) {
   .section-3__wrap {
-    width: 960px;
+    width: 1200px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -78,7 +78,7 @@
 }
 @media screen and (max-width: 1440px) and (min-width: 769px) {
   .section-4__wrap {
-    width: 960px;
+    width: 1200px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -107,7 +107,7 @@
 }
 @media screen and (max-width: 1440px) and (min-width: 769px) {
   .section-5__wrap {
-    width: 960px;
+    width: 1200px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -136,7 +136,7 @@
 }
 @media screen and (max-width: 1440px) and (min-width: 769px) {
   .section-6__wrap {
-    width: 960px;
+    width: 1200px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -185,6 +185,7 @@
   text-shadow: 0.1em 0.1em 4em #fff, 0.1rem 0.1rem 0.2rem #666;
   letter-spacing: 0.5rem;
   transition: font-size 0.4s ease;
+  user-select: none;
 }
 .section-1__scroll {
   position: absolute;
@@ -199,6 +200,7 @@
   color: white;
   font-size: 0.8em;
   letter-spacing: 0.1rem;
+  user-select: none;
 }
 
 @keyframes scrollMove {
@@ -352,6 +354,17 @@
   background-image: url("../images/section-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+.section-3::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
 }
 
 .section-4 {

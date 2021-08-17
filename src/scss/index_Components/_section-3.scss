@@ -4,11 +4,24 @@
 // 커스텀 설정
 @use '../mixin' as fun;
 
-@import '../variables.scss';
+@import "../variables.scss";
 
 .section-3 {
     /* 100vh - header */
     background-image: url("../images/section-3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+
+    &::before {
+        content: "";
+
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+        left: 0;
+    }
 }

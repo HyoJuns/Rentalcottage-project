@@ -10,8 +10,7 @@ $header-backgroundcolor: hsl(0, 0%, 0%, 0);
 // 해더 호버 배경화면
 $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
 
-
-
+$hamburgerSize: 64px;
 // Header Style Start
 .header {
     // 크기 설정
@@ -27,9 +26,9 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
     box-shadow: none;
     z-index: 1000;
 
-    overflow: hidden;
+    // overflow: hidden;
 
-    transition: background-color 0.7s ease-in, box-shadow .7s linear;
+    transition: background-color 0.7s ease-in, box-shadow 0.7s linear;
 
     // ! Hover
     &:hover {
@@ -40,6 +39,7 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
     // Container
     &__wrap {
         @include fun.wrapSetting;
+        @include fun.Debug(yellow);
     }
 
     // Flexbox
@@ -52,7 +52,7 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
 
     // LOGO
     &__logo {
-        width: 10%;
+        width: 150px;
 
         @include fun.Debug();
 
@@ -76,7 +76,62 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
 
         @include fun.FlexboxSetting(row, space-between, center, 1em);
     }
+
+    // Hamburger
+    &__hamburger {
+        position: relative;
+        width: $hamburgerSize;
+        height: $hamburgerSize;
+        cursor: pointer;
+        display: none;
+        @include fun.Debug(rgb(97, 255, 145));
+        // border: 1px solid #fff;
+
+        &:hover .hamburger__line {
+            &--first {
+                transform: translateX(-50%) scale(0.95) rotate(-90deg);
+                top: calc(#{$hamburgerSize} / 4.2);
+            }
+            &--second {
+                transform: translateX(-50%) scale(0.95);
+                top: calc(#{$hamburgerSize} / 2.2);
+            }
+            &--third {
+                transform: translateX(-50%) scale(0.95) rotate(90deg);
+            }
+        }
+    }
 }
+
+.hamburger {
+    &__line {
+        display: block;
+        width: calc(#{$hamburgerSize} / 2);
+        height: 4px;
+        background-color: #fff;
+
+        border-radius: 25px;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%) scale(1);
+        transition: all 0.4s ease-in;
+        &--first {
+            transform-origin: right;
+            top: calc(#{$hamburgerSize} / 2.2);
+        }
+        &--second {
+            top: calc(#{$hamburgerSize} / 1.5);
+        }
+        &--third {
+            transform-origin: left;
+            top: calc(#{$hamburgerSize} / 4.2);
+        }
+    }
+}
+
 .gnb {
     width: 100%;
 
@@ -84,12 +139,12 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
 
     &__item {
         color: white;
-
+        user-select: none;
         transition: color 0.3s ease-in;
         &:hover {
             color: hsl(189, 77.3%, 50%);
         }
-        & > a{
+        & > a {
             padding: 1em 0;
             letter-spacing: 2px;
             color: inherit;
@@ -111,13 +166,57 @@ $header-backgroundcolor-hover: hsla(0, 0%, 0%, 1);
 @include view.Tablet {
     .header {
         &__gnb {
-            @include fun.Debug(red);
+            // @include fun.Debug(red);
 
             width: 80%;
         }
-        &__logo {
-            display: none;
+
+        &__hamburger {
+            display: inline-block;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            z-index: 1000;
+        }
+        &__gnb {
+            position: fixed;
+
+            // @include fun.Debug(red);
+
+            width: 30%;
+            // 300px 이동
+            height: 0px;
+            top: 100px;
+            left: 50%;
+
+            z-index: 100;
+            transform: translateX(-50%);
+            transition: all 0.4s ease;
+            background-color: black;
+            overflow: hidden;
+
+            &--open {
+                height: 300px;
+                background-color: rgba(0, 0, 0, 0);
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 1);
+                }
+            }
         }
     }
-
+    .gnb {
+        height: 300px;
+        padding: 1rem;
+        @include fun.FlexboxSetting(column, space-between, center, 1em);
+    }
+}
+@include view.Mobile {
+    .header {
+        &__hamburger {
+            display: block;
+        }
+    }
 }

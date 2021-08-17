@@ -20,7 +20,7 @@ $color-cyan: hsl(189, 77.3%, 50%);
     height: 100%;
 
     @include view.Desktop {
-        width: 960px;
+        width: 1200px;
     }
     @include view.Tablet {
         width: 90vw;
@@ -115,12 +115,9 @@ $color-cyan: hsl(189, 77.3%, 50%);
 }
 
 // Section 반복
-@mixin sectionLoop($num : 1)
-{
-    @for $i from 1 through $num
-    {
-        .section-#{$i}
-        {
+@mixin sectionLoop($num: 1) {
+    @for $i from 1 through $num {
+        .section-#{$i} {
             position: relative;
 
             width: 100%;
@@ -128,17 +125,13 @@ $color-cyan: hsl(189, 77.3%, 50%);
 
             text-align: center;
         }
-        @if $i > 1
-        {
-            .section-#{$i}
-            {
-                &__wrap
-                {
+        @if $i > 1 {
+            .section-#{$i} {
+                &__wrap {
                     @include Debug(pink);
                     @include wrapSetting;
                 }
             }
         }
-        
     }
 }

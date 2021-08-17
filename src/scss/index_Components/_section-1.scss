@@ -4,7 +4,7 @@
 // 커스텀 설정
 @use '../mixin' as fun;
 
-@use '../variables' as let; 
+@use '../variables' as let;
 .section-1 {
     height: 100vh;
 
@@ -35,6 +35,7 @@
         text-shadow: 0.1em 0.1em 4em #fff, 0.1rem 0.1rem 0.2rem #666;
         letter-spacing: 0.5rem;
         transition: font-size 0.4s ease;
+        user-select: none;
         @include fun.Debug(blue);
     }
 
@@ -55,6 +56,7 @@
             color: let.$color-white;
             font-size: let.$font-size-smalltext;
             letter-spacing: 0.1rem;
+            user-select: none;
         }
         @include fun.Debug(green);
     }
