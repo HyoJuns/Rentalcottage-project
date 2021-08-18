@@ -206,6 +206,9 @@ $hamburgerSize: 64px;
                 }
             }
         }
+        &__logo {
+            display: none;
+        }
     }
     .gnb {
         height: 300px;
@@ -255,6 +258,9 @@ $hamburgerSize: 64px;
                     background-color: rgba(0, 0, 0, 1);
                 }
             }
+        }
+        &__logo {
+            display: none;
         }
     }
     .gnb {

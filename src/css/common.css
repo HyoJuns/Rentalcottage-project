@@ -169,6 +169,9 @@
   .header__gnb--open:hover {
     background-color: black;
   }
+  .header__logo {
+    display: none;
+  }
 
   .gnb {
     height: 300px;
@@ -211,6 +214,9 @@
   }
   .header__gnb--open:hover {
     background-color: black;
+  }
+  .header__logo {
+    display: none;
   }
 
   .gnb {
