@@ -1,7 +1,5 @@
 $(function () {
-    $(`a[href="#"]`).click((e) => {
-        e.preventDefault();
-    });
+    
     const $reservation_item = $(".reservation__item");
     const $section_reservation = $("section.reservation");
 
